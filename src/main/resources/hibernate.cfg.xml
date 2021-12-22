@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://127.0.0.1:5432/tomany</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://127.0.0.1:5432/many_to_many</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">password</property>
         <property name="hibernate.connection.pool_size">2</property>
@@ -17,6 +17,10 @@
         <property name="format_sql">true</property>
         <property name="use_sql_comments">true</property>
 
+        <mapping class="ru.job4j.manytomany.books.Book" />
+        <mapping class="ru.job4j.manytomany.books.Author" />
+        <mapping class="ru.job4j.manytomany.persons.Address" />
+        <mapping class="ru.job4j.manytomany.persons.Person" />
         <mapping class="ru.job4j.many.cars.Brand" />
         <mapping class="ru.job4j.many.cars.Model" />
     </session-factory>
