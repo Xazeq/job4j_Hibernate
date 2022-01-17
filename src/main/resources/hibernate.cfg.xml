@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://127.0.0.1:5432/lazy</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://127.0.0.1:5432/many_to_many</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">password</property>
         <property name="hibernate.connection.pool_size">2</property>
@@ -16,7 +16,11 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <property name="use_sql_comments">true</property>
+        <property name="hibernate.jdbc.time_zone">Europe/Moscow</property>
 
+        <!--<mapping class="ru.job4j.hibernate.date.Product" />
+        <mapping class="ru.job4j.manytomany.model.City" />
+        <mapping class="ru.job4j.manytomany.model.Human" />
         <mapping class="ru.job4j.manytomany.books.Book" />
         <mapping class="ru.job4j.manytomany.books.Author" />
         <mapping class="ru.job4j.manytomany.persons.Address" />
@@ -26,6 +30,7 @@
         <mapping class="ru.job4j.lazy.tasks.Category" />
         <mapping class="ru.job4j.lazy.tasks.Task" />
         <mapping class="ru.job4j.lazy.cars.Brand" />
-        <mapping class="ru.job4j.lazy.cars.Model" />
+        <mapping class="ru.job4j.lazy.cars.Model" />-->
+        <mapping class="ru.job4j.hql.Candidate" />
     </session-factory>
 </hibernate-configuration>
