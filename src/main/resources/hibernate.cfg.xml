@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://127.0.0.1:5432/many_to_many</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://127.0.0.1:5432/hql</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">password</property>
         <property name="hibernate.connection.pool_size">2</property>
@@ -31,6 +31,8 @@
         <mapping class="ru.job4j.lazy.tasks.Task" />
         <mapping class="ru.job4j.lazy.cars.Brand" />
         <mapping class="ru.job4j.lazy.cars.Model" />-->
+        <mapping class="ru.job4j.hql.Vacancy" />
+        <mapping class="ru.job4j.hql.VacanciesBase" />
         <mapping class="ru.job4j.hql.Candidate" />
     </session-factory>
 </hibernate-configuration>
