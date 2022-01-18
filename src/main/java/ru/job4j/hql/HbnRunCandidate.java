@@ -31,10 +31,10 @@ public class HbnRunCandidate {
                     .uniqueResult();
             System.out.println(candidateById);
 
-            Candidate candidateByName = (Candidate) session.createQuery("from Candidate c where c.name = :cName")
+            List<Candidate> candidatesByName = session.createQuery("from Candidate c where c.name = :cName")
                     .setParameter("cName", "Ivan")
-                    .uniqueResult();
-            System.out.println(candidateByName);
+                    .list();
+            System.out.println(candidatesByName);
 
             session.createQuery("update Candidate c set c.experience = :cExp, c.salary = :cSal where c.id = :cId")
                     .setParameter("cExp", 7)
