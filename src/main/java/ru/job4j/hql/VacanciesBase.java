@@ -13,7 +13,7 @@ public class VacanciesBase {
     private int id;
     private String name;
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    List<Vacancy> vacancies = new ArrayList<>();
+    private List<Vacancy> vacancies = new ArrayList<>();
 
     public static VacanciesBase of(String name) {
         VacanciesBase vacanciesBase = new VacanciesBase();
